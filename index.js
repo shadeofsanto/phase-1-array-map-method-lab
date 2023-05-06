@@ -12,5 +12,8 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  const lowerTutorials = tutorials.map(lowCase => lowCase.toLowerCase());
+  const splitLowerTut = lowerTutorials.map(lowerSplit => lowerSplit.split(" "));
+  const upperSplitTut = splitLowerTut.map((upperCaseTut) => upperCaseTut.charAt(0).toUpperCase());
+  return upperSplitTut
 }
